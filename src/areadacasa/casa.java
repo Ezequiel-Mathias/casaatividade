@@ -7,52 +7,44 @@ public class casa {
 	public static void main(String[] args) {
 		
 		Scanner leitor = new Scanner (System.in);
-		int contador = 0;
-		
-		double h,e;
-		String f;
-		String c;
 		
 		
-		
-		System.out.println("-----------------------------------------");
-		System.out.println(" Calculo de área de uma casa ");
-		System.out.println("------------------------------------------");
-		
-		System.out.println(" Qual o nome do cômodo ? ");
-		c = leitor.next();
-		
-		System.out.println(" Qual a largura ? ");
-		h = leitor.nextDouble();
-		
-		System.out.println(" Qual o comprimento ");
-		e = leitor.nextDouble();
-		
-		System.out.println(" deseja calcular mais ? ");
-		f = leitor.next();
+		double larg,comprimento,total;
+		String resposta = "sim";
+		String comodo;
+		double areatotal=0;
 		
 		
-		double result = h + e;
+		while(resposta.equals("sim")) {
 		
-		System.out.println(" A área total da "+ c + "é de : " + result);
+		System.out.println("escreva o comodo : ");
+		comodo = leitor.next();
+		System.out.println("qual a largura: ");
+		larg = leitor.nextDouble();
+		System.out.println("qual o comprimento: ");
+		comprimento = leitor.nextDouble();
 		
-		while (contador <= 0) {
-			
-			if (f.equals("N") || f.equals("n"))
-			
-			System.out.println("fim do calculo ! ");
-			
-			contador = contador + 1;
-			
-			else if (contador <= 10) {
-				System.out.println("fim do calculo ! ");
-				
-				
-				
+		total = larg *comprimento;
+		System.out.println("resultado é = " + total);
+		
+		
+		System.out.println("quer continuar (sim) ou (não) ?");
+		resposta = leitor.next();
+		
+		total=total+areatotal;
+		
+	
+		}
+		System.out.println("finalizado : "+ areatotal);
+		leitor.close();
 				
 			}
+		
+		
+		
+		
 		}
 		
-	}
+	
 
-}
+
